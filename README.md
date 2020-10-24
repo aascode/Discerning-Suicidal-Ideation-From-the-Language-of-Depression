@@ -8,7 +8,6 @@ EHR Electronic Health Records (EHR)
 construction of a depression "lexicon"
 Automation of text screening for depression, proactive screening for suicidality
 
-Heightened:
 ### Datasets
 
 #### Provided Data
@@ -16,10 +15,17 @@ Heightened:
 * [`Reddit-API_Doc.html`](./data/Reddit-API_Doc.html): Pushshift API for  ([source](https://pushshift.io/) | [data dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt))
 
 #### Additional Data
-* [`depression.csv`](./data/datasets/test.csv): Subset of train.csv after cleaning in Notebook 01, saved for use in all notebooks.
-* [`depression_6.csv`](./data/datasets/test.csv): Subset of data from categorical features included in Model 4, saved for Kaggle submission.
-* [`depression_clean.csv`](./data/datasets/test.csv): Subset of data from categorical features included in Model 4, saved for Kaggle submission.
-* [`subreddits_clean.csv`](./data/datasets/test.csv): Subset of data from categorical features included in Model 4, saved for Kaggle submission.* [`suicide_watch.csv`](./data/datasets/test.csv): Subset of data from categorical features included in Model 4, saved for Kaggle submission.* [`suicide_watch_6.csv`](./data/datasets/test.csv): Suicide data, but just the six columns of interest
+* [`depression.csv`](./data/depression.csv): All the data pulled from r/depression with Pushshift API 
+* [`depression_6.csv`](./data/depression_6.csv): Subset of data from r/depression just the 6 columns of interest
+* [`depression_clean.csv`](./depression_clean/test.csv): Depression data, final form ready to model
+* [`suicide_watch.csv`](./data/suicide_watch.csv): All the data pulled from r/suicide_watch with Pushshift API
+* [`suicide_watch_6.csv`](./data/suicide_watch_6.csv): Subset of data from r/suicide_watch just the six columns of interest
+* [`suicide_watch_clean.csv`](./data/suicide_watch_clean.csv): Suicide data, final form ready to model
+
+### Data Dictionary
+
+|Feature|Type|Dataset|Category|Description|
+|---|---|---|---|---|
  
  ### Notebook 01: Web Scraping
  
@@ -49,7 +55,9 @@ Heightened:
  
  ---
  ### Notebook 05: Production Model
- 
+ ## Business Recommendations
+-Yes, Suicidal ideation can be distinguished from depression with a sensitivity of 90% when a threshold of P(Y=1) ≤ 0.39 is enforced
+-A hybrid Machine Learning and Rule based approach may be necessary
  The severity of suicidal ideation has been proposed by Beck et al. as an indicator of suicidal risk.
  
 Resources:
