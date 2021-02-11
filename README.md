@@ -1,4 +1,4 @@
-# Project 3 - Web Scraping and NLP
+# Discerning Suicidal Ideation From the Language of Depression
 
 ***Problem Statement***: Can Natural Language Processing be used to tell suicidal ideation apart from depression in a collection of electronic records?
 ***Target Audience***: A psychiatric treatment center is investigating the association of suicidal ideation and depression. There are a large number of incomplete health records available for clinical research on, but first they need to be encoded correctly. I have been hired to quantify the distinction between help them determine if they can automate the process.
